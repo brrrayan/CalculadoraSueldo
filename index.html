@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <title>Calculadora de Sueldo</title>
+</head>
+<body>
+    <header>
+        <div class="card">
+            <div class="card-header">                
+              <p class="h3 text-justify"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calculator-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M12 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+                <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z"/>
+              </svg>  Calculadora de Sueldo</p>
+            </div>
+    </header>
+
+    <main class="mt-5">
+        <div class="container">
+            <form>                
+                <div class="form-group row">
+                    <label for="SBruto" class="col-sm-2 col-form-label">Sueldo Bruto</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control col-5" id="inputSBruto" maxlength="34685" placeholder="Digite sueldo mensual" value ="" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="ARS" class="col-sm-2 col-form-label">ARS</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control col-5" id="inputARS" value="0" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="AFP" class="col-sm-2 col-form-label">AFP</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control col-5" id="inputAFP" value="0" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="IRS" class="col-sm-2 col-form-label">IRS</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control col-5" id="inputIRS" value="0" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="Descuentos" class="col-sm-2 col-form-label">Descuentos</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control col-5" id="inputTDescuentos" value="0" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="SNeto" class="col-sm-2 col-form-label">Sueldo Neto</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control col-5" id="inputSNeto" value="0" readonly>
+                    </div>
+                  </div>
+                  <div class="form-row text-center">
+                    <div class="col-8 mt-5">
+                        <input type="button" id="btnCalcular" class="btn btn-outline-info" onclick="alert('¡Este codigo esta incompleto, falta el calculo del ISR!')" value="Calcular"></input>
+                    </div>
+                  </div>
+            </form>
+        </div>
+      
+    </main>
+
+    <script>        
+       
+       
+       window.addEventListener("load", Calcular);
+
+function Calcular() {
+    var btn = document.getElementById("btnCalcular").addEventListener("click", AsignarValores);
+}
+
+function AsignarValores() {
+    
+    var SueldoBruto = document.getElementById("inputSBruto").value; 
+    
+    var ARS = parseInt(SueldoBruto * 0.0304);
+    document.getElementById('inputARS').value = ARS;
+        
+    var AFP = parseInt(SueldoBruto * 0.0287);
+    document.getElementById('inputAFP').value = AFP;
+
+    var SueldoAnio = SueldoBruto * 12;
+    var SueldoExento = 416220;
+    var ExcedenteSueldo = 0;
+
+    if(SueldoAnio == SueldoExento){
+        var ISR = parseInt(0);
+        console.log(ISR);
+    }else if (SueldoAnio > SueldoExento){
+        ExcedenteSueldo = SueldoAnio - SueldoExento;
+        let ExcedenteMensual = ExcedenteSueldo / 12;
+        
+        console.log(MontoISR);
+        var ISR = parseInt(MontoISR);
+        //ISR = parseInt(0);
+        console.log(ISR);
+    }
+    document.getElementById('inputIRS').value = ISR;
+
+    var Descuentos = parseInt(AFP+ARS);
+    document.getElementById('inputTDescuentos').value = Descuentos;
+
+    var SueldoNeto = parseInt(SueldoBruto - Descuentos);
+    document.getElementById('inputSNeto').value = SueldoNeto;
+    }
+    
+    </script>
+
+</body>
+<footer>
+    <div class="card-footer text-muted mt-5 text-center">
+        Brayan N. Reyes ~ 20181437@unapec.edu.do •2020•
+      </div>
+</footer>
+</html>
